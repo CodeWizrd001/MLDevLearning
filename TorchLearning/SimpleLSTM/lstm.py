@@ -14,3 +14,10 @@ class LSTM(torch.nn.Module):
         return x
     def __call__(self,x):
         return self.forward(x)
+
+# Big LSTM
+class LSTM_Big(torch.nn.Module):
+    def __init__(self,input_size,output_size):
+        super(LSTM_Big,self).__init__()
+        self.lstm = torch.nn.LSTM(input_size,1024)
+        self.l1 = torch.nn.Linear(1024,2048)

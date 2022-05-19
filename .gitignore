@@ -3,3 +3,6 @@
 
 # Lock Files 
 *.lock
+
+# Temp Files
+temp.py
