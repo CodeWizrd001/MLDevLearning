@@ -1,8 +1,0 @@
-# Python Cache
-__pycache__
-
-# Lock Files 
-*.lock
-
-# Model Files
-model
