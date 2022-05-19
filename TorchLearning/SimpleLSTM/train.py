@@ -21,11 +21,12 @@ def train(model:lstm.LSTM,optimizer,data,labels,epochs=10) :
         if epoch % 10 == 0:
             print(f'[+] Epoch : {epoch:<5d} :::   Loss : {loss.item():<10.5f}')
 
-lstm = lstm.LSTM(21,10,1)
-optimizer = torch.optim.Adam(lstm.parameters(),lr=0.01)
+if __name__ == '__main__':
+    lstm = lstm.LSTM(21,10,1)
+    optimizer = torch.optim.Adam(lstm.parameters(),lr=0.01)
 
-train(lstm,optimizer,d,l,epochs=500)
+    train(lstm,optimizer,d,l,epochs=500)
 
-# Save the model
-torch.save(lstm.state_dict(),'model/model.pt')
-print('[+] Model Saved')
+    # Save the model
+    torch.save(lstm.state_dict(),'model/model.pt')
+    print('[+] Model Saved')
