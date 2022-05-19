@@ -1,6 +1,9 @@
 # Python Cache
 *__pycache__
 
+# Python notebook checkpoints
+*.ipynb_checkpoints
+
 # Lock Files 
 *.lock
 
